@@ -13,6 +13,8 @@
 		C8E1982A1EA524FB0005006F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8E198281EA524FB0005006F /* Main.storyboard */; };
 		C8E1982C1EA524FB0005006F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8E1982B1EA524FB0005006F /* Assets.xcassets */; };
 		C8E1982F1EA524FB0005006F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8E1982D1EA524FB0005006F /* LaunchScreen.storyboard */; };
+		C8E198381EA52F060005006F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E198371EA52F060005006F /* Person.m */; };
+		C8E1983B1EA5454C0005006F /* ViewController+Identifier.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E1983A1EA5454C0005006F /* ViewController+Identifier.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,11 @@
 		C8E1982B1EA524FB0005006F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8E1982E1EA524FB0005006F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8E198301EA524FB0005006F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8E198361EA52F060005006F /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		C8E198371EA52F060005006F /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		C8E198391EA5454C0005006F /* ViewController+Identifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+Identifier.h"; sourceTree = "<group>"; };
+		C8E1983A1EA5454C0005006F /* ViewController+Identifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+Identifier.m"; sourceTree = "<group>"; };
+		C8E1983C1EA5483D0005006F /* ViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerDataSource.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +65,15 @@
 		C8E1981E1EA524FB0005006F /* Intro_to_Objective-c */ = {
 			isa = PBXGroup;
 			children = (
+				C8E198361EA52F060005006F /* Person.h */,
+				C8E198371EA52F060005006F /* Person.m */,
 				C8E198221EA524FB0005006F /* AppDelegate.h */,
 				C8E198231EA524FB0005006F /* AppDelegate.m */,
+				C8E1983C1EA5483D0005006F /* ViewControllerDataSource.h */,
 				C8E198251EA524FB0005006F /* ViewController.h */,
 				C8E198261EA524FB0005006F /* ViewController.m */,
+				C8E198391EA5454C0005006F /* ViewController+Identifier.h */,
+				C8E1983A1EA5454C0005006F /* ViewController+Identifier.m */,
 				C8E198281EA524FB0005006F /* Main.storyboard */,
 				C8E1982B1EA524FB0005006F /* Assets.xcassets */,
 				C8E1982D1EA524FB0005006F /* LaunchScreen.storyboard */,
@@ -110,6 +122,7 @@
 				TargetAttributes = {
 					C8E1981B1EA524FB0005006F = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 8EL2FG2Q62;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -152,6 +165,8 @@
 			files = (
 				C8E198271EA524FB0005006F /* ViewController.m in Sources */,
 				C8E198241EA524FB0005006F /* AppDelegate.m in Sources */,
+				C8E1983B1EA5454C0005006F /* ViewController+Identifier.m in Sources */,
+				C8E198381EA52F060005006F /* Person.m in Sources */,
 				C8E198211EA524FB0005006F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8EL2FG2Q62;
 				INFOPLIST_FILE = "Intro_to_Objective-c/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AustinRogers.Intro-to-Objective-c";
@@ -285,6 +301,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8EL2FG2Q62;
 				INFOPLIST_FILE = "Intro_to_Objective-c/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AustinRogers.Intro-to-Objective-c";
