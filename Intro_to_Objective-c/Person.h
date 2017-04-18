@@ -10,16 +10,8 @@
 
 @interface Person : NSObject
 
-@property(strong, nonatomic) NSString *firstName, *lastName, *age;
-//Name accessor Methods
-//-(NSString *)name;
-//-(void)setName:(NSString *)name;
-
-//Instance Method
--(void)walk;
-
-//Class Method
-+(void)sayHello;
-
+@property(strong, nonatomic) NSString *firstName;
+@property(strong, nonatomic) NSString *lastName;
+@property(strong, nonatomic) NSNumber *age;
 
 @end

@@ -15,6 +15,8 @@
 		C8E1982F1EA524FB0005006F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8E1982D1EA524FB0005006F /* LaunchScreen.storyboard */; };
 		C8E198381EA52F060005006F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E198371EA52F060005006F /* Person.m */; };
 		C8E1983B1EA5454C0005006F /* ViewController+Identifier.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E1983A1EA5454C0005006F /* ViewController+Identifier.m */; };
+		C8E198401EA660200005006F /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E1983F1EA660200005006F /* Employee.m */; };
+		C8E198441EA665420005006F /* NSString+String.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E198431EA665420005006F /* NSString+String.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,12 @@
 		C8E198391EA5454C0005006F /* ViewController+Identifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+Identifier.h"; sourceTree = "<group>"; };
 		C8E1983A1EA5454C0005006F /* ViewController+Identifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+Identifier.m"; sourceTree = "<group>"; };
 		C8E1983C1EA5483D0005006F /* ViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerDataSource.h; sourceTree = "<group>"; };
+		C8E1983D1EA65F5D0005006F /* PersonQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonQueue.h; sourceTree = "<group>"; };
+		C8E1983E1EA660200005006F /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
+		C8E1983F1EA660200005006F /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
+		C8E198411EA663FF0005006F /* Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Main.h; sourceTree = "<group>"; };
+		C8E198421EA665420005006F /* NSString+String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+String.h"; sourceTree = "<group>"; };
+		C8E198431EA665420005006F /* NSString+String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+String.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +57,8 @@
 		C8E198131EA524FB0005006F = {
 			isa = PBXGroup;
 			children = (
+				C8E198421EA665420005006F /* NSString+String.h */,
+				C8E198431EA665420005006F /* NSString+String.m */,
 				C8E1981E1EA524FB0005006F /* Intro_to_Objective-c */,
 				C8E1981D1EA524FB0005006F /* Products */,
 			);
@@ -67,6 +77,9 @@
 			children = (
 				C8E198361EA52F060005006F /* Person.h */,
 				C8E198371EA52F060005006F /* Person.m */,
+				C8E1983D1EA65F5D0005006F /* PersonQueue.h */,
+				C8E1983E1EA660200005006F /* Employee.h */,
+				C8E1983F1EA660200005006F /* Employee.m */,
 				C8E198221EA524FB0005006F /* AppDelegate.h */,
 				C8E198231EA524FB0005006F /* AppDelegate.m */,
 				C8E1983C1EA5483D0005006F /* ViewControllerDataSource.h */,
@@ -74,6 +87,7 @@
 				C8E198261EA524FB0005006F /* ViewController.m */,
 				C8E198391EA5454C0005006F /* ViewController+Identifier.h */,
 				C8E1983A1EA5454C0005006F /* ViewController+Identifier.m */,
+				C8E198411EA663FF0005006F /* Main.h */,
 				C8E198281EA524FB0005006F /* Main.storyboard */,
 				C8E1982B1EA524FB0005006F /* Assets.xcassets */,
 				C8E1982D1EA524FB0005006F /* LaunchScreen.storyboard */,
@@ -166,6 +180,8 @@
 				C8E198271EA524FB0005006F /* ViewController.m in Sources */,
 				C8E198241EA524FB0005006F /* AppDelegate.m in Sources */,
 				C8E1983B1EA5454C0005006F /* ViewController+Identifier.m in Sources */,
+				C8E198441EA665420005006F /* NSString+String.m in Sources */,
+				C8E198401EA660200005006F /* Employee.m in Sources */,
 				C8E198381EA52F060005006F /* Person.m in Sources */,
 				C8E198211EA524FB0005006F /* main.m in Sources */,
 			);

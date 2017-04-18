@@ -7,35 +7,24 @@
 //
 
 #import "ViewController.h"
-#import "ViewControllerDataSource.h"
-#import "Person.h"
+#import "NSString+String.h"
 
-static int gMoveNumber = 10;
-
-@interface ViewController () <ViewControllerDataSource>
+@interface ViewController ()
 
 @end
-
-
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    Person *nomad = [[Person alloc] init];
+    NSString *sampleString = @"Ain't no rest for the wicked.";
     
-    [nomad setName:@"Nomadic"];
+    NSArray *sampleArray = [sampleString toArray];
+    NSLog(@"%@", sampleArray);
+    [sampleString reversedString];
     
-    [nomad walk];
-    
-    [Person sayHello];
-    
-    NSLog(@"%i", gMoveNumber);
 }
 
--(void)requiredNumberForEachItem:(int)number{
-    
-}
 
 @end

@@ -24,18 +24,18 @@
 //}
 
 
--(void)walk{
-    
-    NSString *name = [self name];
-    
-//    NSString *austin = @"Austin";
-    
-    NSLog(@"And %@ would walk 500 miles, and %@ would walk 500 more.", name, name);
-}
-
-+(void)sayHello {
-    NSLog(@"HEEEEEEY");
-}
+//-(void)walk{
+//    
+//    NSString *name = [self name];
+//    
+////    NSString *austin = @"Austin";
+//    
+//    NSLog(@"And %@ would walk 500 miles, and %@ would walk 500 more.", name, name);
+//}
+//
+//+(void)sayHello {
+//    NSLog(@"HEEEEEEY");
+//}
 
 
 
