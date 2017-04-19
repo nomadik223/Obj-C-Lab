@@ -29,6 +29,8 @@
     Employee *original = [[Employee alloc]initWithFirstName:@"Zant" lastName:@"Varentine" age:@30 email:@"godslayer66@gmail.com" yearsEmployed:@44 andManager:@"Belfrost"];
     
     [[EmployeeDatabase shared] add: original];
+    [[EmployeeDatabase shared] add: original];
+    [[EmployeeDatabase shared] add: original];
     
     self.table.delegate = self;
     self.table.dataSource = self;
