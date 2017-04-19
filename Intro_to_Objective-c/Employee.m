@@ -13,6 +13,40 @@ NSNumber *_employeeNumber;
 NSNumber *_yearsEmployed;
 NSString *_managerName;
 
+
+-(instancetype)initWithFirstName:(NSString *)firstName
+                        lastName:(NSString *)lastName
+                             age:(NSNumber *)age
+                           email:(NSString *)email
+                   yearsEmployed:(NSNumber *)yearsEmployed
+                      andManager:(NSString *)managerName{
+    
+    self = [super initWithFirstName:firstName lastName:lastName andAge:age];
+    
+    if (self){
+        _yearsEmployed = yearsEmployed;
+        _managerName = managerName;
+        _email = email;
+        _employeeNumber = [NSNumber numberWithInt:arc4random_uniform(1000)];
+    }
+    
+    return self;
+    
+}
+
+-(id)copyWithZone:(NSZone *)zone{
+    
+    Employee *employee = [super copyWithZone:zone];
+    
+    employee.employeeNumber = self.employeeNumber;
+    employee.managerName = self.managerName;
+    employee.yearsEmployed = self.yearsEmployed;
+    employee.email = self.email;
+    
+    return employee;
+    
+}
+
 //Getter
 -(NSNumber *)employeeNumber{
     return _employeeNumber;

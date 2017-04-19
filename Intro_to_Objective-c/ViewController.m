@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "NSString+String.h"
+#import "EmployeeDatabase.h"
+#import "Employee.h"
 
 @interface ViewController ()
 
@@ -18,7 +20,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *sampleString = @"Ain't no rest for the wicked.";
+    [[EmployeeDatabase shared] allEmployees];
+    
+    Employee *original = [[Employee alloc]initWithFirstName:@"Austin" lastName:@"Rogers" age:@20 email:@"contactALRogers@gmail.com" yearsEmployed:@1 andManager:@"Katherine"];
+    
+    [[EmployeeDatabase shared] add: original];
+    
+    Employee *newInstructor = [original copy];
+    
+    newInstructor.firstName = @"Test";
+    
+    NSLog(@"%@", original.firstName);
+    
+    NSString *sampleString = @"Random crits are fair and balanced.";
     
     NSArray *sampleArray = [sampleString toArray];
     NSLog(@"%@", sampleArray);
