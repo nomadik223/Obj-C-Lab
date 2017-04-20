@@ -93,7 +93,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Mw0-JQ-5rQ" firstAttribute="top" secondItem="qzK-gb-XXE" secondAttribute="bottom" constant="45" id="1Jm-yA-k1u"/>
                             <constraint firstItem="atk-Yh-v6A" firstAttribute="top" secondItem="PHc-lC-9uo" secondAttribute="bottom" constant="57" id="5WL-SJ-O8N"/>
