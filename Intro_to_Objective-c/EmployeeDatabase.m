@@ -29,6 +29,34 @@
     
 }
 
+-(instancetype)init{
+    self = [super init];
+    
+    if (self) {
+        
+        _employees = [NSKeyedUnarchiver unarchiveObjectWithData:[NSData dataWithContentsOfURL:self.archiveURL]];
+        
+        if (!_employees) {
+            _employees = [[NSMutableArray alloc]init];
+        }
+    
+    }
+    return self;
+}
+
+-(void)save{
+    
+    BOOL success = [NSKeyedArchiver archiveRootObject:self.employees toFile:self.archiveURL.path];
+    
+    if (success) {
+        NSLog(@"Saved employees");
+    } else {
+        NSLog(@"Save failed. Try again later. Or not at all; I'm a computer log not your boss.");
+    }
+    
+}
+
+
 -(NSInteger)count {
     return [_employees count];
 }
@@ -47,19 +75,23 @@
         _employees = [[NSMutableArray alloc]init];
     }
     [_employees addObject:employee];
+    [self save];
 }
 
 -(void)remove:(Employee *)employee{
     [_employees removeObject:employee];
+    [self save];
 }
 
 -(void)removeEmployeeAtIndex:(int)index{
     [_employees removeObjectAtIndex:index];
+    [self save];
 }
 
 
 -(void)removeAllEmployees{
     [_employees removeAllObjects];
+    [self save];
 }
 
 //MARK: Helper methods
