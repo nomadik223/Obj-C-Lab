@@ -19,6 +19,7 @@
 		C8E198441EA665420005006F /* NSString+String.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E198431EA665420005006F /* NSString+String.m */; };
 		C8E198471EA6879D0005006F /* EmployeeDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E198461EA6879D0005006F /* EmployeeDatabase.m */; };
 		C8E198501EA7AE820005006F /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E1984F1EA7AE820005006F /* NewViewController.m */; };
+		C8E198531EA904540005006F /* AddEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E198521EA904530005006F /* AddEmployeeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		C8E198461EA6879D0005006F /* EmployeeDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeDatabase.m; sourceTree = "<group>"; };
 		C8E1984E1EA7AE820005006F /* NewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
 		C8E1984F1EA7AE820005006F /* NewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
+		C8E198511EA904530005006F /* AddEmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEmployeeViewController.h; sourceTree = "<group>"; };
+		C8E198521EA904530005006F /* AddEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEmployeeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				C8E1983A1EA5454C0005006F /* ViewController+Identifier.m */,
 				C8E1984E1EA7AE820005006F /* NewViewController.h */,
 				C8E1984F1EA7AE820005006F /* NewViewController.m */,
+				C8E198511EA904530005006F /* AddEmployeeViewController.h */,
+				C8E198521EA904530005006F /* AddEmployeeViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 			files = (
 				C8E198271EA524FB0005006F /* ViewController.m in Sources */,
 				C8E198241EA524FB0005006F /* AppDelegate.m in Sources */,
+				C8E198531EA904540005006F /* AddEmployeeViewController.m in Sources */,
 				C8E198471EA6879D0005006F /* EmployeeDatabase.m in Sources */,
 				C8E1983B1EA5454C0005006F /* ViewController+Identifier.m in Sources */,
 				C8E198441EA665420005006F /* NSString+String.m in Sources */,

@@ -39,8 +39,8 @@
         if (!_employees) {
             _employees = [[NSMutableArray alloc]init];
         }
-    
     }
+    
     return self;
 }
 
@@ -49,13 +49,12 @@
     BOOL success = [NSKeyedArchiver archiveRootObject:self.employees toFile:self.archiveURL.path];
     
     if (success) {
-        NSLog(@"Saved employees");
+        NSLog(@"Saved Employees!");
     } else {
-        NSLog(@"Save failed. Try again later. Or not at all; I'm a computer log not your boss.");
+        NSLog(@"Save failed. :(");
     }
     
 }
-
 
 -(NSInteger)count {
     return [_employees count];
@@ -71,21 +70,27 @@
 
 
 -(void)add:(Employee *)employee{
-    if ([_employees count] == 0) {
-        _employees = [[NSMutableArray alloc]init];
+    if (![self.employees containsObject:employee]) {
+        [_employees addObject:employee];
+        [self save];
     }
-    [_employees addObject:employee];
-    [self save];
+    
 }
 
 -(void)remove:(Employee *)employee{
-    [_employees removeObject:employee];
-    [self save];
+    if ([self.employees containsObject:employee]) {
+        [_employees removeObject:employee];
+        [self save];
+    }
+    
 }
 
 -(void)removeEmployeeAtIndex:(int)index{
-    [_employees removeObjectAtIndex:index];
-    [self save];
+    if (_employees[index] != nil) {
+        [_employees removeObjectAtIndex:index];
+        [self save];
+    }
+    
 }
 
 
