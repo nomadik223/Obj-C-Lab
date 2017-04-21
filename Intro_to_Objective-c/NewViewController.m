@@ -8,10 +8,13 @@
 
 #import "NewViewController.h"
 #import "EmployeeDatabase.h"
+#import "PointlessThing.h"
+
+static void *kvoContext = &kvoContext;
 
 @interface NewViewController () <UITableViewDelegate,UITableViewDataSource>
 
-
+@property (strong, nonatomic) PointlessThing *pointlessThing;
 @property (weak, nonatomic) IBOutlet UITableView *table;
 
 @end
@@ -24,7 +27,42 @@
     
     self.table.dataSource = self;
     
+    self.pointlessThing = [[PointlessThing alloc]init];
+    
+    [self setValue:@4417 forKeyPath:@"pointlessThing.pointlessThing"];
+    
+    NSLog(@"%i", (int)self.pointlessThing.pointlessThing);
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadView) name:@"reloadData" object:nil];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self addObserver:self forKeyPath:@"self.pointlessThing.pointlessThing" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:kvoContext];
+    
+    [self.pointlessThing incrementPointlessThing];
+    
+    [self.pointlessThing incrementPointlessThing];
+    
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    
+    [self removeObserver:self forKeyPath:@"self.pointlessThing.pointlessThing"];
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    
+    if (context == kvoContext) {
+        
+        NSLog(@"The completely pointless thing is now: %i. How useful.", (int)self.pointlessThing.pointlessThing);
+        
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+    
 }
 
 -(void)reloadView{
@@ -44,6 +82,17 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [[EmployeeDatabase shared] count];
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [[EmployeeDatabase shared] removeEmployeeAtIndex:(int)indexPath.row];
+        [self.table reloadData];
+    }
+}
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return true;
 }
 
 @end

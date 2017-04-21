@@ -43,31 +43,25 @@ NSString *_managerName;
         self.firstName = [aDecoder decodeObjectForKey:@"firstName"];
         self.lastName = [aDecoder decodeObjectForKey:@"lastName"];
         self.age = [aDecoder decodeObjectForKey:@"age"];
-        self.email = [aDecoder decodeObjectForKey:@"email"];
         
+        self.email = [aDecoder decodeObjectForKey:@"email"];
         self.yearsEmployed = [aDecoder decodeObjectForKey:@"yearsEmployed"];
         self.managerName = [aDecoder decodeObjectForKey:@"managerName"];
         self.employeeNumber = [aDecoder decodeObjectForKey:@"employeeNumber"];
         
     }
-    
     return self;
-    
 }
 
 -(void)encodeWithCoder:(NSCoder *)aCoder{
-    
     [aCoder encodeObject:self.firstName forKey:@"firstName"];
     [aCoder encodeObject:self.lastName forKey:@"lastName"];
     [aCoder encodeObject:self.age forKey:@"age"];
     [aCoder encodeObject:self.email forKey:@"email"];
-    
     [aCoder encodeObject:self.yearsEmployed forKey:@"yearsEmployed"];
     [aCoder encodeObject:self.managerName forKey:@"managerName"];
     [aCoder encodeObject:self.employeeNumber forKey:@"employeeNumber"];
-    
 }
-
 
 
 -(id)copyWithZone:(NSZone *)zone{
@@ -82,6 +76,7 @@ NSString *_managerName;
     return employee;
     
 }
+
 
 //Getter
 -(NSNumber *)employeeNumber{
@@ -98,15 +93,48 @@ NSString *_managerName;
 
 //Setter
 -(void)setEmployeeNumber:(NSNumber *)employeeNumber {
-    _employeeNumber = employeeNumber;
+    
+    if (_employeeNumber != employeeNumber) {
+        
+        [employeeNumber retain];
+        [_employeeNumber release];
+        
+        _employeeNumber = employeeNumber;
+    }
 }
 
 -(void)setYearsEmployed:(NSNumber *)yearsEmployed {
-    _yearsEmployed = yearsEmployed;
+    
+    if (_yearsEmployed != yearsEmployed) {
+        
+        [yearsEmployed retain];
+        [_yearsEmployed release];
+        
+        _yearsEmployed = yearsEmployed;
+    }
 }
 
 -(void)setManagerName:(NSString *)managerName {
-    _managerName = managerName;
+    
+    if (_managerName != managerName) {
+        
+        [managerName retain];
+        [_managerName release];
+        
+        _managerName = managerName;
+    }
+}
+
+-(void)setEmail:(NSString *)email {
+    
+    if (_email != email) {
+        
+        [email retain];
+        [_email release];
+        
+        _email = email;
+        
+    }
 }
 
 @end

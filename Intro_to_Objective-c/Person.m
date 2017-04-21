@@ -37,11 +37,10 @@
 //    NSLog(@"HEEEEEEY");
 //}
 
-
 -(instancetype)initWithFirstName:(NSString *)firstName
                         lastName:(NSString *)lastName
-                          andAge:(NSNumber *)age;
-{
+                          andAge:(NSNumber *)age{
+    
     self = [super init];
     if (self) {
         _firstName = firstName;
@@ -57,9 +56,42 @@
     person.firstName = self.firstName;
     person.lastName = self.lastName;
     person.age = self.age;
-
+    
     return person;
 }
 
+//Setters
+-(void)setFirstName:(NSString *)firstName{
+    if (_firstName != firstName) {
+        
+        [firstName retain];
+        [_firstName release];
+        
+        _firstName = firstName;
+    }
+}
+-(void)setLastName:(NSString *)lastName{
+    
+    if (_lastName != lastName) {
+        
+        [lastName retain];
+        [_lastName release];
+        
+        _lastName = lastName;
+    }
+    
+}
+-(void)setAge:(NSNumber *)age{
+    
+    if (_age != age) {
+        
+        [age retain];
+        [_age release];
+        
+        _age = age;
+        
+    }
+    
+}
 
 @end
